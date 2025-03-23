@@ -1,0 +1,28 @@
+adhar@hexadata:~/Ayantika_genre0/trailer-genre-classification$ python3 -m classification.src.inference --model_dir classification/output/single_transformer --video_path preprocessing/data/trailers/down
+loaded/3VDfF2Mxv0g.mkv
+Parsing done
+Extracting features:   0%|                                                                                                                                                         | 0/5 [00:00<?, ?it/s]
+Feature: clip
+Extracting features:  20%|█████████████████████████████                                                                                                                    | 1/5 [00:03<00:13,  3.42s/it]
+Feature: beats
+Extracting features:  40%|██████████████████████████████████████████████████████████                                                                                       | 2/5 [00:06<00:09,  3.33s/it]
+Feature: asr_sentiment
+Extracting features:  60%|███████████████████████████████████████████████████████████████████████████████████████                                                          | 3/5 [00:27<00:22, 11.34s/it]
+Feature: ocr_sentiment
+Extracting features:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                             | 4/5 [00:44<00:13, 13.48s/it]
+Feature: face_emotion
+Extracting features: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:49<00:00,  9.81s/it]
+
+Optical character recognition (OCR):
+a time warner company. By director Tond Phillips. Priest's name -. rubber stamp. A white lion. a eon2. The Commission has also adopted a proposal for a directive on the protection of the environment and the environment.
+Sentiment analysis:
+90%  Neutral
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/adhar/Ayantika_genre0/trailer-genre-classification/classification/src/inference.py", line 186, in <module>
+    sentiment_prediction = video_outputs['asr_sentiment']['predictions'][0].capitalize()
+IndexError: list index out of range
+adhar@hexadata:~/Ayantika_genre0/trailer-genre-classification$ 
