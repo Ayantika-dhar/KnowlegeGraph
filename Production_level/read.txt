@@ -1,1 +1,8 @@
 Same logic but Code modifed to fit in with trailer genre classification project
+
+How to use :
+
+from KG.graph_embedding_pipeline import text_to_graph_embedding
+
+graph_embedding = text_to_graph_embedding(text)
+
